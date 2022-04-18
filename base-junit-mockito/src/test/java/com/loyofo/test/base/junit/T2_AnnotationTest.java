@@ -32,7 +32,9 @@ public class T2_AnnotationTest {
         System.out.println("@Test 测试方法 1, 批量测试时被忽略, 只能单独运行");
     }
 
+
     @Test
+    @Ignore
     public void test2() {
         System.out.println("@Test 测试方法 2");
     }

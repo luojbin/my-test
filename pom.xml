@@ -14,43 +14,45 @@
         <module>spring-test</module>
         <module>springboot-test</module>
         <module>app-demo</module>
+        <module>junit5-test</module>
     </modules>
 
     <properties>
-        <activeMQ.Version>5.7.0</activeMQ.Version>
+        <activeMQ.version>5.7.0</activeMQ.version>
         <el.impl.version>2.2.4</el.impl.version>
-        <aspectJ.Version>1.7.2</aspectJ.Version>
-        <commonsLang.Version>3.1</commonsLang.Version>
-        <ehcache.Version>2.7.4</ehcache.Version>
-        <ehcacheJCache.Version>1.4.0-beta1</ehcacheJCache.Version>
-        <h2.Version>1.4.182</h2.Version>
-        <hamcrest.Version>1.3</hamcrest.Version>
-        <hibernate.Version>4.1.6.Final</hibernate.Version>
-        <hibernateEntityManager.Version>4.0.1.Final</hibernateEntityManager.Version>
-        <hibernateValidator.Version>5.0.1.Final</hibernateValidator.Version>
-        <jackson.Version>2.4.3</jackson.Version>
-        <javaxMail.Version>1.4.7</javaxMail.Version>
-        <jspApi.Version>2.2</jspApi.Version>
-        <jspEl.Version>2.2.4</jspEl.Version>
-        <jstl.Version>1.2</jstl.Version>
-        <junit.Version>4.12</junit.Version>
-        <log4j.Version>1.2.14</log4j.Version>
-        <mockito.Version>2.23.4</mockito.Version>
-        <servletApi.Version>3.1.0</servletApi.Version>
-        <slf4j.Version>1.7.5</slf4j.Version>
-        <springAMQP.Version>1.0.0.RELEASE</springAMQP.Version>
-        <springDataJpa.Version>1.3.2.RELEASE</springDataJpa.Version>
-        <springSecurity.Version>3.2.0.RELEASE</springSecurity.Version>
-        <spring.Version>4.3.20.RELEASE</spring.Version>
-        <springWebflow.Version>2.4.1.RELEASE</springWebflow.Version>
-        <systemRules.Version>1.5.0</systemRules.Version>
-        <thymeleaf.Version>2.1.3.RELEASE</thymeleaf.Version>
-        <tiles.Version>3.0.1</tiles.Version>
-        <gson.Version>2.8.5</gson.Version>
-        <logback.Version>1.2.3</logback.Version>
-        <slf4j.Version>1.7.25</slf4j.Version>
-        <hikari.Version>3.2.0</hikari.Version>
-        <mysql.Version>5.1.47</mysql.Version>
+        <aspectJ.version>1.7.2</aspectJ.version>
+        <commonsLang.version>3.1</commonsLang.version>
+        <ehcache.version>2.7.4</ehcache.version>
+        <ehcacheJCache.version>1.4.0-beta1</ehcacheJCache.version>
+        <h2.version>1.4.182</h2.version>
+        <hamcrest.version>1.3</hamcrest.version>
+        <hibernate.version>4.1.6.Final</hibernate.version>
+        <hibernateEntityManager.version>4.0.1.Final</hibernateEntityManager.version>
+        <hibernateValidator.version>5.0.1.Final</hibernateValidator.version>
+        <jackson.version>2.4.3</jackson.version>
+        <javaxMail.version>1.4.7</javaxMail.version>
+        <jspApi.version>2.2</jspApi.version>
+        <jspEl.version>2.2.4</jspEl.version>
+        <jstl.version>1.2</jstl.version>
+        <junit.version>4.12</junit.version>
+        <junit.jupiter.version>5.7.0</junit.jupiter.version>
+        <log4j.version>1.2.14</log4j.version>
+        <mockito.version>2.23.4</mockito.version>
+        <servletApi.version>3.1.0</servletApi.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <springAMQP.version>1.0.0.RELEASE</springAMQP.version>
+        <springDataJpa.version>1.3.2.RELEASE</springDataJpa.version>
+        <springSecurity.version>3.2.0.RELEASE</springSecurity.version>
+        <spring.version>4.3.20.RELEASE</spring.version>
+        <springWebflow.version>2.4.1.RELEASE</springWebflow.version>
+        <systemRules.version>1.5.0</systemRules.version>
+        <thymeleaf.version>2.1.3.RELEASE</thymeleaf.version>
+        <tiles.version>3.0.1</tiles.version>
+        <gson.version>2.8.5</gson.version>
+        <logback.version>1.2.3</logback.version>
+        <slf4j.version>1.7.25</slf4j.version>
+        <hikari.version>3.2.0</hikari.version>
+        <mysql.version>5.1.47</mysql.version>
     </properties>
 
     <dependencyManagement>
@@ -59,24 +61,24 @@
             <dependency>
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
-                <version>${servletApi.Version}</version>
+                <version>${servletApi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>javax.servlet.jsp</groupId>
                 <artifactId>jsp-api</artifactId>
-                <version>${jspApi.Version}</version>
+                <version>${jspApi.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jstl</groupId>
                 <artifactId>jstl</artifactId>
-                <version>${jstl.Version}</version>
+                <version>${jstl.version}</version>
             </dependency>
             <dependency>
                 <groupId>javax.el</groupId>
                 <artifactId>javax.el-api</artifactId>
-                <version>${jspEl.Version}</version>
+                <version>${jspEl.version}</version>
                 <scope>provided</scope>
             </dependency>
             <dependency>
@@ -89,7 +91,7 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-webmvc</artifactId>
-                <version>${spring.Version}</version>
+                <version>${spring.version}</version>
                 <exclusions>
                     <exclusion>
                         <artifactId>commons-logging</artifactId>
@@ -102,64 +104,69 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>${spring.Version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
-                <version>${junit.Version}</version>
+                <version>${junit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.junit.jupiter</groupId>
+                <artifactId>junit-jupiter-engine</artifactId>
+                <version>${junit.jupiter.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-core</artifactId>
-                <version>${mockito.Version}</version>
+                <version>${mockito.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.hamcrest</groupId>
                 <artifactId>hamcrest-library</artifactId>
-                <version>${hamcrest.Version}</version>
+                <version>${hamcrest.version}</version>
             </dependency>
 
             <!-- aop -->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
-                <version>${aspectJ.Version}</version>
+                <version>${aspectJ.version}</version>
             </dependency>
 
             <!-- json -->
             <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
-                <version>${gson.Version}</version>
+                <version>${gson.version}</version>
             </dependency>
 
             <!-- dataSource -->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>${spring.Version}</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.h2database</groupId>
                 <artifactId>h2</artifactId>
-                <version>${h2.Version}</version>
+                <version>${h2.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
-                <version>${hikari.Version}</version>
+                <version>${hikari.version}</version>
             </dependency>
             <!-- slf4j + logback -->
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>${logback.Version}</version>
+                <version>${logback.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
-                <version>${slf4j.Version}</version>
+                <version>${slf4j.version}</version>
             </dependency>
         </dependencies>
 
